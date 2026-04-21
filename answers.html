@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Respostas às perguntas de Redes e Apache — Projeto Final SI por Eric Simões 3ºPIS">
-    <title>Perguntas de Redes e Apache — Projeto SI</title>
+    <title>Respostas de Redes e Apache — Projeto SI</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body class="bg-bg text-text-primary min-h-screen font-sans">
 
 <!-- ── Header ── -->
-<header class="fixed top-0 left-0 w-full h-[80px] bg-[rgba(6,14,32,0.85)]! backdrop-blur-md border-b border-border shadow-[0_4px_40px_rgba(0,0,0,0.4)] flex items-center justify-between px-12 z-50">
+<header class="fixed top-0 left-0 w-full h-[80px] bg-[rgba(6,14,32,0.85)] backdrop-blur-md border-b border-border shadow-[0_4px_40px_rgba(0,0,0,0.4)] flex items-center justify-between px-12 z-50">
     <h1 class="text-cyan font-bold text-[20px] tracking-[-0.05em] no-underline">
         Eric Simões 3ºPIS
     </h1>
@@ -42,7 +42,7 @@
 
     <!-- Hero -->
     <h1 class="text-text-primary text-[clamp(48px,6vw,72px)] font-extrabold tracking-[-0.05em] leading-none">
-        Perguntas de <span class="text-cyan">Redes e Apache</span>
+        Respostas
     </h1>
 
     <!-- Bento Grid -->
@@ -65,10 +65,13 @@
                 <h2 class="text-text-primary text-[22px] font-semibold leading-snug m-0">
                     1. O que é um endereço IPv4 e como se identifica no Windows?
                 </h2>
-                <p class="text-text-secondary text-[14px] leading-relaxed m-0">
-                    Entender a identidade única de um dispositivo na rede é o primeiro passo para a conectividade global. Utilize ferramentas de terminal para mapear o seu local host.
-                </p>
-                <a href="#topico-01" class="text-cyan text-[12px] font-bold tracking-[0.07em] no-underline hover:underline mt-1">EXPLORAR CONCEITO &rarr;</a>
+                <div class="callout">
+                    <p class="text-text-secondary text-[14px] leading-relaxed m-0">
+                        O IPv4 é um rótulo numérico de 32 bits. No Windows, utilize o comando
+                        <code class="inline-code">ipconfig</code>
+                        no CMD (Prompt de Comando) para visualizar os detalhes da sua interface de rede.
+                    </p>
+                </div>
             </div>
         </article>
 
@@ -89,10 +92,11 @@
                 <h2 class="text-text-primary text-[22px] font-semibold leading-snug m-0">
                     2. Porque outro PC consegue aceder ao Apache através do IP?
                 </h2>
-                <p class="text-text-secondary text-[14px] leading-relaxed m-0">
-                    O protocolo HTTP sobre TCP/IP permite que múltiplos clientes requisitem recursos de um único servidor. Descubra a mecânica por trás do handshake.
-                </p>
-                <a href="#topico-02" class="text-cyan text-[12px] font-bold tracking-[0.07em] no-underline hover:underline mt-1">VER RESPOSTA &rarr;</a>
+                <div class="callout">
+                    <p class="text-text-secondary text-[14px] leading-relaxed m-0">
+                        Isso ocorre porque o IP aponta diretamente para a máquina onde o serviço Apache está "ouvindo" em uma porta específica (geralmente 80 para HTTP), processando a requisição e devolvendo os arquivos do site através do protocolo TCP/IP.
+                    </p>
+                </div>
             </div>
         </article>
 
@@ -113,10 +117,11 @@
                 <h2 class="text-text-primary text-[18px] font-semibold leading-snug m-0">
                     3. Diferença entre localhost e 192.168.x.x?
                 </h2>
-                <p class="text-text-secondary text-[13px] leading-relaxed m-0">
-                    Loopback vs. LAN. Entenda como o sistema operacional trata o tráfego interno versus o tráfego de interface física.
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#53ddfc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                <div class="callout">
+                    <p class="text-text-secondary text-[13px] leading-relaxed m-0">
+                        <code class="inline-code">localhost</code> (127.0.0.1) é o loopback interno da própria máquina; já o endereço <code class="inline-code">192.168.x.x</code> é a identidade da interface física na rede local, visível para outros nós.
+                    </p>
+                </div>
             </div>
         </article>
 
@@ -137,10 +142,11 @@
                 <h2 class="text-text-primary text-[18px] font-semibold leading-snug m-0">
                     4. O que pode impedir o acesso LAN?
                 </h2>
-                <p class="text-text-secondary text-[13px] leading-relaxed m-0">
-                    Firewalls, portas bloqueadas e isolamento de router. Identifique os obstáculos comuns na comunicação cliente-servidor.
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div class="callout">
+                    <p class="text-text-secondary text-[13px] leading-relaxed m-0">
+                        Geralmente o Windows Firewall bloqueia as portas 80/443 por padrão, ou configurações de isolamento de cliente (AP isolation) no roteador impedem a comunicação entre dispositivos.
+                    </p>
+                </div>
             </div>
         </article>
 
@@ -161,10 +167,11 @@
                 <h2 class="text-text-primary text-[18px] font-semibold leading-snug m-0">
                     5. Como testar num segundo PC da sala?
                 </h2>
-                <p class="text-text-secondary text-[13px] leading-relaxed m-0">
-                    Protocolo de teste prático: ping, verificação de IP e acesso via browser em ambiente de laboratório real.
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#53ddfc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                <div class="callout">
+                    <p class="text-text-secondary text-[13px] leading-relaxed m-0">
+                        Assegure que ambos estão no mesmo Wi-Fi/LAN, descubra o IP do host (servidor) e digite esse IP diretamente no navegador do segundo PC. Se não carregar, revise as regras de firewall.
+                    </p>
+                </div>
             </div>
         </article>
 
