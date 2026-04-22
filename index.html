@@ -7,8 +7,8 @@
     <title>Perguntas de Redes e Apache — Projeto SI</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-bg text-text-primary min-h-screen font-sans">
 
@@ -17,8 +17,8 @@
     <h1 class="text-cyan font-bold text-[20px] tracking-[-0.05em] no-underline">
         Eric Simões 3ºPIS
     </h1>
-    <div class="flex items-center gap-3">
-        <button
+    <div class="flex items-center gap-4">
+    <button
             id="btn-login"
             type="button"
             class="bg-transparent border border-[rgba(83,221,252,0.5)] text-cyan px-5 py-2 rounded text-[14px] font-medium cursor-pointer transition-colors duration-200 hover:bg-cyan-dim"
@@ -29,12 +29,11 @@
             id="btn-register-open"
             type="button"
             class="bg-cyan text-cyan-dark px-5 py-2 rounded text-[14px] font-semibold cursor-pointer transition-colors duration-200 hover:bg-[#22d3ee]"
-            data-bs-toggle="modal"
-            data-bs-target="#register-modal"
         >
             Register
-        </button>
+        </button>    
     </div>
+    
 </header>
 
 <!-- ── Main ── -->
@@ -49,16 +48,16 @@
     <div class="grid grid-cols-6 gap-6 max-lg:grid-cols-4 max-sm:grid-cols-1">
 
         <!-- Tópico 01 — IPv4 -->
-        <article class="group col-span-3 max-lg:col-span-4 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col border border-border transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
+        <article class="group col-span-3 max-lg:col-span-4 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
             <div class="relative w-full h-48 overflow-hidden">
                 <img
                     src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
                     alt="Servidores de rede representando endereçamento IPv4"
-                    class="card-img"
+                    class="w-full h-full object-cover grayscale opacity-75 transition-[opacity,filter] duration-300 ease-[ease] group-hover:opacity-90 group-hover:grayscale-[0.5]"
                     loading="lazy"
                 >
                 <span class="absolute top-3.5 right-3.5 bg-badge text-badge-text text-[11px] font-bold tracking-[0.07em] px-3 py-1 rounded-full">
-                    Tópico 01
+                    TÓPICO 01
                 </span>
             </div>
             <div class="flex flex-col gap-3.5 p-8 w-full">
@@ -73,16 +72,16 @@
         </article>
 
         <!-- Tópico 02 — Apache -->
-        <article class="group col-span-3 max-lg:col-span-4 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col border border-border transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
+        <article class="group col-span-3 max-lg:col-span-4 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
             <div class="relative w-full h-48 overflow-hidden">
                 <img
                     src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80"
                     alt="Cabos de rede e infraestrutura Apache"
-                    class="card-img"
+                    class="w-full h-full object-cover grayscale opacity-75 transition-[opacity,filter] duration-300 ease-[ease] group-hover:opacity-90 group-hover:grayscale-[0.5]"
                     loading="lazy"
                 >
                 <span class="absolute top-3.5 right-3.5 bg-badge text-badge-text text-[11px] font-bold tracking-[0.07em] px-3 py-1 rounded-full">
-                    Tópico 02
+                    TÓPICO 02
                 </span>
             </div>
             <div class="flex flex-col gap-3.5 p-8 w-full">
@@ -97,16 +96,16 @@
         </article>
 
         <!-- Tópico 03 — Localhost vs IP -->
-        <article class="group col-span-2 max-lg:col-span-2 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col border border-border transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
+        <article class="group col-span-2 max-lg:col-span-2 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
             <div class="relative w-full h-40 overflow-hidden">
                 <img
                     src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80"
                     alt="Placa de circuito representando loopback vs rede local"
-                    class="card-img"
+                    class="w-full h-full object-cover grayscale opacity-75 transition-[opacity,filter] duration-300 ease-[ease] group-hover:opacity-90 group-hover:grayscale-[0.5]"
                     loading="lazy"
                 >
                 <span class="absolute top-3.5 right-3.5 bg-badge text-badge-text text-[11px] font-bold tracking-[0.07em] px-3 py-1 rounded-full">
-                    Tópico 03
+                    TÓPICO 03
                 </span>
             </div>
             <div class="flex flex-col gap-3 px-6 pt-[22px] pb-[26px] w-full">
@@ -121,16 +120,16 @@
         </article>
 
         <!-- Tópico 04 — Barreiras LAN -->
-        <article class="group col-span-2 max-lg:col-span-2 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col border border-border transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
+        <article class="group col-span-2 max-lg:col-span-2 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
             <div class="relative w-full h-40 overflow-hidden">
                 <img
                     src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80"
                     alt="Firewall e segurança de rede"
-                    class="card-img"
+                    class="w-full h-full object-cover grayscale opacity-75 transition-[opacity,filter] duration-300 ease-[ease] group-hover:opacity-90 group-hover:grayscale-[0.5]"
                     loading="lazy"
                 >
                 <span class="absolute top-3.5 right-3.5 bg-badge text-badge-text text-[11px] font-bold tracking-[0.07em] px-3 py-1 rounded-full">
-                    Tópico 04
+                    TÓPICO 04
                 </span>
             </div>
             <div class="flex flex-col gap-3 px-6 pt-[22px] pb-[26px] w-full">
@@ -145,16 +144,16 @@
         </article>
 
         <!-- Tópico 05 — Testar -->
-        <article class="group col-span-2 max-lg:col-span-2 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col border border-border transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
+        <article class="group col-span-2 max-lg:col-span-2 max-sm:col-span-1 bg-surface rounded-[10px] overflow-hidden flex flex-col transition-all duration-250 ease-out hover:-translate-y-1 hover:border-cyan-card-border hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(83,221,252,0.1)]">
             <div class="relative w-full h-40 overflow-hidden">
                 <img
                     src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80"
                     alt="Teste de conectividade num segundo PC"
-                    class="card-img"
+                    class="w-full h-full object-cover grayscale opacity-75 transition-[opacity,filter] duration-300 ease-[ease] group-hover:opacity-90 group-hover:grayscale-[0.5]"
                     loading="lazy"
                 >
                 <span class="absolute top-3.5 right-3.5 bg-badge text-badge-text text-[11px] font-bold tracking-[0.07em] px-3 py-1 rounded-full">
-                    Tópico 05
+                    TÓPICO 05
                 </span>
             </div>
             <div class="flex flex-col gap-3 px-6 pt-[22px] pb-[26px] w-full">
@@ -171,42 +170,95 @@
     </div>
 </main>
 
-<!-- Register Modal -->
-<div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="register-modal-title" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title fs-5" id="register-modal-title">Criar conta</h2>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+<!-- ── Login Modal ── -->
+<div id="modal-login" class="fixed inset-0 z-[9000] flex items-center justify-center bg-black/65 backdrop-blur-[4px] p-4" role="dialog" aria-modal="true" aria-labelledby="login-modal-title" hidden>
+    <div class="relative bg-[#111827] ring-1 ring-white/[0.08] rounded-2xl p-8 w-full max-w-[460px] shadow-[0_25px_60px_rgba(0,0,0,0.6)] outline-none">
+        <button id="btn-login-close" aria-label="Close" class="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-[6px] text-[#9ca3af] bg-transparent border-0 cursor-pointer transition-[color,background] duration-150 hover:text-text-primary hover:bg-[#1f2937] p-0">
+            <i data-lucide="x" class="w-[18px] h-[18px] [stroke-width:2.5]"></i>
+        </button>
+        <h2 id="login-modal-title" class="text-[1.375rem] font-bold text-white m-0 mb-1">Sign In</h2>
+        <p class="text-[0.875rem] text-[#9ca3af] m-0 mb-4">Sign in to your account.</p>
+        <form action="#" method="post" class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1.5">
+                <label for="login-email" class="text-[0.875rem] font-medium text-[#d1d5db]">Email address</label>
+                <input
+                    type="email"
+                    id="login-email"
+                    name="email"
+                    class="bg-[#0f172a] rounded-lg px-3.5 py-2.5 text-[0.9rem] text-text-primary outline-none w-full placeholder:text-[#4b5563]"
+                    placeholder="name@example.com"
+                    required
+                >
             </div>
-            <form action="register.php" method="post">
-                <div class="modal-body d-flex flex-column gap-3">
-                    <input
-                        type="email"
-                        class="form-control"
-                        placeholder="Email"
-                        id="reg-email"
-                        name="email"
-                        required
-                    >
-                    <input
-                        type="password"
-                        class="form-control"
-                        placeholder="Password"
-                        id="reg-password"
-                        name="password"
-                        minlength="8"
-                        required
-                    >
+            <div class="flex flex-col gap-1.5">
+                <div class="flex items-center justify-between">
+                    <label for="login-password" class="text-[0.875rem] font-medium text-[#d1d5db]">Password</label>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn btn-primary">Registar</button>
-                </div>
-            </form>
-        </div>
+                <input
+                    type="password"
+                    id="login-password"
+                    name="password"
+                    class="bg-[#0f172a] rounded-lg px-3.5 py-2.5 text-[0.9rem] text-text-primary outline-none w-full placeholder:text-[#4b5563]"
+                    placeholder="••••••••"
+                    required
+                >
+            </div>
+            <button type="submit" class="w-full mt-1 py-[0.65rem] bg-[#4f46e5] text-white text-[0.9375rem] font-semibold border-0 rounded-lg cursor-pointer transition-[background,transform] duration-200 hover:bg-[#4338ca] active:scale-[0.98]">Sign In</button>
+            <p class="text-[0.8125rem] text-[#9ca3af] text-center m-0">Don't have an account? <a href="#" class="text-[#6366f1] no-underline transition-colors duration-150 hover:text-[#818cf8] hover:underline" id="link-go-register">Register here</a></p>
+        </form>
     </div>
 </div>
+
+<!-- ── Register Modal ── -->
+<div id="modal-register" class="fixed inset-0 z-[9000] flex items-center justify-center bg-black/65 backdrop-blur-[4px] p-4" role="dialog" aria-modal="true" aria-labelledby="register-modal-title" hidden>
+    <div class="relative bg-[#111827] ring-1 ring-white/[0.08] rounded-2xl p-8 w-full max-w-[460px] shadow-[0_25px_60px_rgba(0,0,0,0.6)] outline-none">
+        <button id="btn-register-close" aria-label="Close" class="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-[6px] text-[#9ca3af] bg-transparent border-0 cursor-pointer transition-[color,background] duration-150 hover:text-text-primary hover:bg-[#1f2937] p-0">
+            <i data-lucide="x" class="w-[18px] h-[18px] [stroke-width:2.5]"></i>
+        </button>
+        <h2 id="register-modal-title" class="text-[1.375rem] font-bold text-white m-0 mb-1">Create an account</h2>
+        <p class="text-[0.875rem] text-[#9ca3af] m-0 mb-4">Fill in your details to register.</p>
+        <form action="register.php" method="post" class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1.5">
+                <label for="reg-name" class="text-[0.875rem] font-medium text-[#d1d5db]">Full Name</label>
+                <input
+                    type="text"
+                    id="reg-name"
+                    name="name"
+                    class="bg-[#0f172a] rounded-lg px-3.5 py-2.5 text-[0.9rem] text-text-primary outline-none w-full placeholder:text-[#4b5563]"
+                    placeholder="John Doe"
+                    required
+                >
+            </div>
+            <div class="flex flex-col gap-1.5">
+                <label for="reg-email" class="text-[0.875rem] font-medium text-[#d1d5db]">Email address</label>
+                <input
+                    type="email"
+                    id="reg-email"
+                    name="email"
+                    class="bg-[#0f172a] rounded-lg px-3.5 py-2.5 text-[0.9rem] text-text-primary outline-none w-full placeholder:text-[#4b5563]"
+                    placeholder="you@example.com"
+                    required
+                >
+            </div>
+            <div class="flex flex-col gap-1.5">
+                <label for="reg-password" class="text-[0.875rem] font-medium text-[#d1d5db]">Password</label>
+                <input
+                    type="password"
+                    id="reg-password"
+                    name="password"
+                    class="bg-[#0f172a] rounded-lg px-3.5 py-2.5 text-[0.9rem] text-text-primary outline-none w-full placeholder:text-[#4b5563]"
+                    placeholder="••••••••"
+                    minlength="8"
+                    required
+                >
+            </div>
+            <button type="submit" class="w-full mt-1 py-[0.65rem] bg-[#4f46e5] text-white text-[0.9375rem] font-semibold border-0 rounded-lg cursor-pointer transition-[background,transform] duration-200 hover:bg-[#4338ca] active:scale-[0.98]">Register</button>
+            <p class="text-[0.8125rem] text-[#9ca3af] text-center m-0">Already have an account? <a href="#" class="text-[#6366f1] no-underline transition-colors duration-150 hover:text-[#818cf8] hover:underline" id="link-go-login">Login here</a></p>
+        </form>
+    </div>
+</div>
+
+<script src="modal.js" defer></script>
 
 </body>
 </html>

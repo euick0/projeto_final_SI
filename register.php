@@ -40,7 +40,7 @@ try {
     $_SESSION['user_id'] = $userId;
     $_SESSION['email'] = $email;
 
-    echo "<script>window.location.href = 'main.php';</script>";
+    echo "<script>window.location.href = 'answers.php';</script>";
 
 } catch (Exception $e) {
     echo ("Error: " . $e->getMessage());
