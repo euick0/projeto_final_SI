@@ -14,6 +14,7 @@ try {
         throw new Exception("");
     }
 
+    $name = $_POST['name'] ?? 'Utilizador';
     $email = $_POST['email'];
     $password = $_POST['password'];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -39,6 +40,7 @@ try {
     $_SESSION['logged_in'] = true;
     $_SESSION['user_id'] = $userId;
     $_SESSION['email'] = $email;
+    $_SESSION['name'] = $name;
 
     echo "<script>window.location.href = 'answers.php';</script>";
 
