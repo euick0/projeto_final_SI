@@ -1,3 +1,12 @@
+<?php
+$message = '';
+$type = 'danger';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['message'])) {
+    $message = htmlspecialchars($_POST['message'], ENT_QUOTES);
+    $type = htmlspecialchars($_POST['type'] ?? 'danger', ENT_QUOTES);
+}
+?>
 <!DOCTYPE html>
 <html lang="pt" class="scroll-smooth">
 <head>
@@ -9,6 +18,7 @@
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="output.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 <body class="bg-bg text-text-primary min-h-screen font-sans">
 
@@ -255,6 +265,24 @@
         </form>
     </div>
 </div>
+
+<?php if ($message): ?>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 99999">
+    <div id="flash-toast" class="toast show align-items-center text-bg-<?= $type ?> border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <?= $message ?>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Fechar"></button>
+        </div>
+    </div>
+</div>
+<script>
+    var toastEl = document.getElementById('flash-toast');
+    var toast = new bootstrap.Toast(toastEl, { delay: 5000 });
+    toast.show();
+</script>
+<?php endif; ?>
 
 <script src="modal.js" defer></script>
 

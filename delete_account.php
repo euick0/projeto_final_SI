@@ -12,12 +12,21 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $connection = mysqli_connect('localhost', 'root');
+
+if (!$connection) {
+    header('Location: answers.php');
+    exit();
+}
+
 mysqli_select_db($connection, 'projetoFinalSI');
 
-if ($connection) {
-    $userId = (int) $_SESSION['user_id'];
-    mysqli_query($connection, "DELETE FROM user WHERE id = $userId");
-    mysqli_close($connection);
+$userId = (int) $_SESSION['user_id'];
+$result = mysqli_query($connection, "DELETE FROM user WHERE id = $userId");
+mysqli_close($connection);
+
+if (!$result) {
+    header('Location: answers.php');
+    exit();
 }
 
 session_unset();
