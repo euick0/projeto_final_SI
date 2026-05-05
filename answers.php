@@ -403,7 +403,7 @@ $email = $_SESSION["email"] ?? '';
                     <div class="border-l-2 border-cyan pl-4 py-1 w-full">
                         <p class="text-text-secondary text-[13px] leading-relaxed m-0">Geralmente o Windows Firewall
                             bloqueia as portas 80/443 por padrão, ou configurações de isolamento de cliente (AP
-                            isolation) no roteador impedem a comunicação entre dispositivos.</p>
+                            isolation) no router impedem a comunicação entre dispositivos.</p>
                     </div>
                 </div>
             </article>
